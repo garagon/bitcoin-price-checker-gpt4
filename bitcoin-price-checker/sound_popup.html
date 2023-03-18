@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        width: 1px;
+        height: 1px;
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <audio id="notificationSound" src="notification.mp3" autoplay></audio>
+  </body>
+  <script>
+    const audioElement = document.getElementById("notificationSound");
+
+    audioElement.onended = () => {
+      window.close();
+    };
+  </script>
+</html>
